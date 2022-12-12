@@ -93,6 +93,11 @@ def yolov5s(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=Tr
     return _create('yolov5s', pretrained, channels, classes, autoshape, _verbose, device)
 
 
+def yolov5sRL(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
+    # YOLOv5-small Leaky ReLU model https://github.com/ultralytics/yolov5
+    return _create('yolov5s-LeakyReLU', pretrained, channels, classes, autoshape, _verbose, device)
+
+
 def yolov5m(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
     # YOLOv5-medium model https://github.com/ultralytics/yolov5
     return _create('yolov5m', pretrained, channels, classes, autoshape, _verbose, device)
